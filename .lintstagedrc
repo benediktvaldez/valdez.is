@@ -1,0 +1,9 @@
+{
+  "verbose": false,
+  "linters": {
+    "*.js": [
+      "yon run format",
+      "git add"
+    ]
+  }
+}
