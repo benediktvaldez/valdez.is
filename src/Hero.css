@@ -1,0 +1,69 @@
+.Hero {
+  display: flex;
+  margin: 0 auto;
+  padding: 5vmin;
+  width: 100%;
+  height: 90vh;
+
+  text-align: center;
+  color: var(--primary-alt);
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary);
+
+  transition: background-color 500ms, height 3500ms ease-out;
+
+  --primary: var(--red);
+  --primary-alt: var(--light);
+}
+
+.Hero.light {
+  --primary: var(--light);
+  --primary-alt: var(--red);
+}
+
+.Hero.dark {
+  --primary: var(--dark);
+  --primary-alt: var(--light);
+}
+
+.Hero.blue {
+  --primary: var(--blue);
+}
+
+.Hero.loading {
+  height: 100%;
+  height: 100vh;
+}
+
+.Hero h1, .Hero h2 {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+
+  transition: color 500ms;
+}
+
+.Hero h1 {
+  font-size: calc(40px + 10vmin);
+  /*text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);*/
+}
+
+.Hero h2 {
+  font-size: calc(20px + 3vmin);
+  /*text-shadow: 0 0 7px rgba(0, 0, 0, 0.15);*/
+  max-width: 1200px;
+}
+
+.Hero h2 span,
+.Hero h1 span {
+  display: block;
+}
+
+/*.Hero h2 span:last-child,
+.Hero h1 span:last-child {
+  font-size: 0.8em;
+}*/
