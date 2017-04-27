@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 import './Social.css'
 
-import Typewriter from './Typewriter'
-
 class App extends Component {
   render() {
     return (

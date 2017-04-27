@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import cx from 'classnames'
 import './App.css'
 
 import Hero from './Hero'
