@@ -1,0 +1,50 @@
+language: node_js
+node_js:
+- 7
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script:
+  - yarn run test
+  - yarn run build
+
+deploy:
+- provider: gcs
+  access_key_id: GOOGND27YUQRRAZLRLRM
+  secret_access_key:
+    secure: hpFo0aaNhaW5duakZLcvDa/3H1PocflvvUabjCG/NOrzJ3stuht5PbBpmIRaE2gTEPiFJhST4yrKyMMQYa7/VbM06LTBOUWssdxNDNE0dfCTD1AMJ8T4JgmUBRY7s7euAjlHhjwqvAqYxyEmQz7H05kg4wdy8qlsevPEGL0XUtsanjgxWTc9hBUQNmRqP3ehZSB0XuuYkVQC7dMgc6ZyrnFIL1L+j9eUhfNts9j4bEBpsqZ3PmqhkyKhe9ZMQ7N8mJb7nUtxlNV2dONt5Xniy0GD8cHOTg9Sb3yJwSZIJz2YDClKoBzqKy4eZgJfwXg9W1eOjXqy5tJIOCcXjFhogFTWPHJdw0AQMS5wKcVUSLP8vTMnxYh+hsFBUxRQZWvgpbq/yRMmeFMmPeCioPDAYbHsA7LpXxrcbBgA3D+JhXXyXd7oboUZonTctC6qNR9Z47nimGHxbnCktpfOoyPTitjqBz933oFq6kPoZGCpoBwW2KaFrM5YOnXGLkDTI2v8MCgschtvZhShBy77Nhyn/PHSp2/8vNBcGp6bMDBTMQJXaeGZvyzFOH9o7aABGyqewTxhQ/yVisbb6vZPvrrCV1We7tLqnOJ6BQAsweHVgaWlNv08O46BB8C/d4UxQMgJTtSWOeBBIMRje5E+aS8sKl1nY7FYvXq0kycoE9IJGQI=
+  bucket: www.valdez.is
+  skip_cleanup: true
+  local-dir: build
+  acl: public-read
+  cache_control: "no-cache"
+  on:
+    branch: master
+    repo: benediktvaldez/valdez.is
+- provider: gcs
+  access_key_id: GOOGND27YUQRRAZLRLRM
+  secret_access_key:
+    secure: hpFo0aaNhaW5duakZLcvDa/3H1PocflvvUabjCG/NOrzJ3stuht5PbBpmIRaE2gTEPiFJhST4yrKyMMQYa7/VbM06LTBOUWssdxNDNE0dfCTD1AMJ8T4JgmUBRY7s7euAjlHhjwqvAqYxyEmQz7H05kg4wdy8qlsevPEGL0XUtsanjgxWTc9hBUQNmRqP3ehZSB0XuuYkVQC7dMgc6ZyrnFIL1L+j9eUhfNts9j4bEBpsqZ3PmqhkyKhe9ZMQ7N8mJb7nUtxlNV2dONt5Xniy0GD8cHOTg9Sb3yJwSZIJz2YDClKoBzqKy4eZgJfwXg9W1eOjXqy5tJIOCcXjFhogFTWPHJdw0AQMS5wKcVUSLP8vTMnxYh+hsFBUxRQZWvgpbq/yRMmeFMmPeCioPDAYbHsA7LpXxrcbBgA3D+JhXXyXd7oboUZonTctC6qNR9Z47nimGHxbnCktpfOoyPTitjqBz933oFq6kPoZGCpoBwW2KaFrM5YOnXGLkDTI2v8MCgschtvZhShBy77Nhyn/PHSp2/8vNBcGp6bMDBTMQJXaeGZvyzFOH9o7aABGyqewTxhQ/yVisbb6vZPvrrCV1We7tLqnOJ6BQAsweHVgaWlNv08O46BB8C/d4UxQMgJTtSWOeBBIMRje5E+aS8sKl1nY7FYvXq0kycoE9IJGQI=
+  bucket: valdez.is
+  skip_cleanup: true
+  local-dir: build
+  acl: public-read
+  cache_control: "no-cache"
+  on:
+    branch: master
+    repo: benediktvaldez/valdez.is
+- provider: gcs
+  access_key_id: GOOGND27YUQRRAZLRLRM
+  secret_access_key:
+    secure: hpFo0aaNhaW5duakZLcvDa/3H1PocflvvUabjCG/NOrzJ3stuht5PbBpmIRaE2gTEPiFJhST4yrKyMMQYa7/VbM06LTBOUWssdxNDNE0dfCTD1AMJ8T4JgmUBRY7s7euAjlHhjwqvAqYxyEmQz7H05kg4wdy8qlsevPEGL0XUtsanjgxWTc9hBUQNmRqP3ehZSB0XuuYkVQC7dMgc6ZyrnFIL1L+j9eUhfNts9j4bEBpsqZ3PmqhkyKhe9ZMQ7N8mJb7nUtxlNV2dONt5Xniy0GD8cHOTg9Sb3yJwSZIJz2YDClKoBzqKy4eZgJfwXg9W1eOjXqy5tJIOCcXjFhogFTWPHJdw0AQMS5wKcVUSLP8vTMnxYh+hsFBUxRQZWvgpbq/yRMmeFMmPeCioPDAYbHsA7LpXxrcbBgA3D+JhXXyXd7oboUZonTctC6qNR9Z47nimGHxbnCktpfOoyPTitjqBz933oFq6kPoZGCpoBwW2KaFrM5YOnXGLkDTI2v8MCgschtvZhShBy77Nhyn/PHSp2/8vNBcGp6bMDBTMQJXaeGZvyzFOH9o7aABGyqewTxhQ/yVisbb6vZPvrrCV1We7tLqnOJ6BQAsweHVgaWlNv08O46BB8C/d4UxQMgJTtSWOeBBIMRje5E+aS8sKl1nY7FYvXq0kycoE9IJGQI=
+  bucket: dev.valdez.is
+  skip_cleanup: true
+  local-dir: build
+  acl: public-read
+  cache_control: "no-cache"
+  on:
+    branch: develop
+    repo: benediktvaldez/valdez.is
