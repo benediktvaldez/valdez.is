@@ -29,3 +29,11 @@ body {
 hr,img {
   box-sizing: content-box;
 }
+
+a {
+  color: var(--blue);
+
+  &:hover {
+    color: var(--red);
+  }
+}

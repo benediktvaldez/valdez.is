@@ -35,8 +35,8 @@ class App extends Component {
         <h2>
           {this.state.h1 &&
             <Typewriter
-              speed={10}
-              randomSpeed
+              delay={1000}
+              speed={70}
               tag="span"
               done={() => this.setState({ h2: true })}
             >

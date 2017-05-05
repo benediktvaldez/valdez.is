@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 5vmin;
   width: 100%;
-  height: 90vh;
+  height: 75vh;
 
   text-align: center;
   color: var(--primary-alt);
@@ -18,6 +18,10 @@
 
   --primary: var(--red);
   --primary-alt: var(--light);
+
+  a {
+    color: var(--primary-alt);
+  }
 }
 
 .Hero.light {
