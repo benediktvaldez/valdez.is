@@ -1,23 +1,35 @@
 import React, { Component } from 'react'
-import cx from 'classnames'
-import './Social.css'
 
-class App extends Component {
+import './Footer.css'
+
+class Footer extends Component {
   render() {
     return (
-      <div className={cx(['Social', 'light'])}>
+      <div className="Footer light">
         <h3>
           Also; a developer at
           {' '}
-          <a target="_blank" href="https://kolibri.is">Kolibri</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://kolibri.is"
+          >
+            Kolibri
+          </a>
           , where I make excellent UI/UX with
           {' '}
-          <a target="_blank" href="https://labs.icelandair.com/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://labs.icelandair.com/"
+          >
             Icelandair Digital Labs
           </a>
           , a curator of
           {' '}
-          <a target="_blank" href="https://jsconf.is">JSConf Iceland</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://jsconf.is">
+            JSConf Iceland
+          </a>
           {' '}
           and a board member of SVEF
           {' '}
@@ -31,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Footer

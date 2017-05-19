@@ -1,4 +1,4 @@
-.Social {
+.Footer {
   display: flex;
   margin: 0 auto;
   padding: 5vmin;
@@ -20,30 +20,30 @@
   --primary-alt: var(--light);
 }
 
-.Social.light {
+.Footer.light {
   --primary: var(--light);
   --primary-alt: var(--dark);
 }
-.Social.light b,
-.Social.light strong {
+.Footer.light b,
+.Footer.light strong {
   color: var(--red);
 }
 
-.Social.dark {
+.Footer.dark {
   --primary: var(--dark);
   --primary-alt: var(--light);
 }
 
-.Social.blue {
+.Footer.blue {
   --primary: var(--blue);
 }
 
-.Social.loading {
+.Footer.loading {
   height: 100%;
   height: 100vh;
 }
 
-.Social h3 {
+.Footer h3 {
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -54,7 +54,7 @@
   transition: color 500ms;
 }
 
-.Social h4 {
+.Footer h4 {
   display: block;
   margin: 0 auto;
   padding: 0;
