@@ -15,6 +15,7 @@
   background-color: var(--primary);
 
   transition: background-color 500ms, height 3500ms ease-out;
+  transition-delay: 250ms;
 
   --primary: var(--red);
   --primary-alt: var(--light);

@@ -4,7 +4,7 @@ import './Hero.css'
 
 import Typewriter from './Typewriter'
 
-class App extends Component {
+class Hero extends Component {
   constructor() {
     super()
     this.state = {
@@ -50,4 +50,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Hero
