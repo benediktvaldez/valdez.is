@@ -31,9 +31,9 @@ hr,img {
 }
 
 a {
-  color: var(--blue);
+  color: var(--red);
 
   &:hover {
-    color: var(--red);
+    color: var(--blue);
   }
 }
