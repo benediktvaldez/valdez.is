@@ -3,24 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@epegzz/sass-vars-loader": "^3.2.0",
+    "bootstrap": "^4.0.0-beta.3",
     "classnames": "^2.2.5",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "contentful": "^5.0.5",
+    "node-sass": "^4.7.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-async-bootstrapper": "^1.1.2",
+    "react-async-component": "^1.0.2",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-jobs": "^1.0.0",
+    "sass-loader": "^6.0.6",
+    "tux": "^0.4.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.4",
-    "prettier": "^1.5.3",
-    "react-scripts": "^1.0.11",
-    "yarn-or-npm": "^2.0.4"
+    "tux-scripts": "0.4.0"
   },
   "scripts": {
-    "precommit": "lint-staged",
-    "format": "prettier --single-quote --trailing-comma=es5 --semi=false --write",
-    "start": "HTTPS=true react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "tux-scripts start",
+    "build": "tux-scripts build",
+    "serve": "tux-scripts serve"
   }
 }

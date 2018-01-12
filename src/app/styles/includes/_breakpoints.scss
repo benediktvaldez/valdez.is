@@ -1,0 +1,15 @@
+@function breakpoint($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @return map-get($breakpoints, $bp);
+  }
+}
+
+@mixin media($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media (min-width: breakpoint($bp)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

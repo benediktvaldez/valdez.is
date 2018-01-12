@@ -1,0 +1,41 @@
+.test-grid-wrap {
+  $color: gray;
+
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-size: 8px;
+  line-height: 2;
+
+  text-align: center;
+  pointer-events: none;
+
+  color: color($color);
+
+  &.horizontal {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 15.25px,
+      color($color, fade) 15.25px,
+      color($color, fade) 16px
+    );
+  }
+
+  &.vertical div {
+    &:before {
+      display: block;
+
+      padding-top: 16px;
+      height: 100%;
+
+      content: attr(data-key);
+
+      background: color($color, tint);
+    }
+  }
+}

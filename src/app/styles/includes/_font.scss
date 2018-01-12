@@ -1,0 +1,5 @@
+@function font($font: serif) {
+  @if map-has-key($fonts, $font) {
+    @return unquote(map-get($fonts, $font));
+  }
+}
