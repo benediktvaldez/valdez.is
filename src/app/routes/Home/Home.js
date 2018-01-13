@@ -3,6 +3,9 @@ import Helmet from 'react-helmet'
 import { withJob } from 'react-jobs'
 
 import api from 'app/api'
+import Footer from 'app/components/Footer'
+import Header from 'app/components/Header'
+import Section from 'app/components/Section'
 
 const Home = ({ jobResult: data }) => {
   const content = data.items[0]
@@ -11,11 +14,13 @@ const Home = ({ jobResult: data }) => {
       <title>{content.fields.title}</title>
     </Helmet>,
     <div key="Home">
-      <div className="row">
-        <div className="col-sm-6 offset-sm-3">
-          <p>Edit app.js to get started</p>
-        </div>
-      </div>
+      <Header />
+      <Section type="Introduction" />
+      <Section type="Community" />
+      <Section type="Career" />
+      <Section type="Experience" />
+      <Section type="Projects" />
+      <Footer />
     </div>
   ]
 }
