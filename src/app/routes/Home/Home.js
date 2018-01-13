@@ -7,20 +7,20 @@ import Footer from 'app/components/Footer'
 import Header from 'app/components/Header'
 import Section from 'app/components/Section'
 
-const Home = ({ jobResult: data }) => {
+const Home = ({ screenProps, jobResult: data }) => {
   const content = data.items[0]
   return [
     <Helmet key="helmet">
       <title>{content.fields.title}</title>
     </Helmet>,
     <div key="Home">
-      <Header />
-      <Section type="Introduction" />
-      <Section type="Community" />
-      <Section type="Career" />
-      <Section type="Experience" />
-      <Section type="Projects" />
-      <Footer />
+      <Header screenProps={screenProps} />
+      <Section screenProps={screenProps} type="Introduction" />
+      <Section screenProps={screenProps} type="Community" />
+      <Section screenProps={screenProps} type="Career" />
+      <Section screenProps={screenProps} type="Experience" />
+      <Section screenProps={screenProps} type="Projects" />
+      <Footer screenProps={screenProps} />
     </div>
   ]
 }
