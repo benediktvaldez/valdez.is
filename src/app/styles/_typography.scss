@@ -1,0 +1,110 @@
+
+b, strong {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding-right: 1vw;
+
+  font-family: font(sans);
+  font-weight: 700;
+  line-height: 1.1667em;
+
+  letter-spacing: -0.02em;
+
+  color: inherit;
+}
+
+h1 {
+  font-size: fontSize(h1, mobile);
+  font-size: betweenMobile(mobileMinFontSize(h1), mobileMaxFontSize(h1));
+  line-height: 1.175em;
+}
+
+h2 {
+  font-size: fontSize(h2, mobile);
+  font-size: betweenMobile(mobileMinFontSize(h2), mobileMaxFontSize(h2));
+}
+
+h3 {
+  font-size: fontSize(h3, mobile);
+  font-size: betweenMobile(mobileMinFontSize(h3), mobileMaxFontSize(h3));
+  line-height: 1.16em;
+}
+
+h4 {
+  font-size: fontSize(h4, mobile);
+  font-size: betweenMobile(mobileMinFontSize(h4), mobileMaxFontSize(h4));
+  line-height: 1.16em;
+}
+
+p {
+  font-size: fontSize(p, mobile);
+  font-size: betweenMobile(mobileMinFontSize(p), mobileMaxFontSize(p));
+  line-height: 1.8em;
+}
+
+@include media(tabletMin) {
+  h1 {
+    font-size: fontSize(h1, tablet);
+    font-size: betweenTablet(tabletMinFontSize(h1), tabletMaxFontSize(h1));
+    line-height: 1.168em;
+  }
+
+  h2 {
+    font-size: fontSize(h2, tablet);
+    font-size: betweenTablet(tabletMinFontSize(h2), tabletMaxFontSize(h2));
+    line-height: 1.171em;
+  }
+  h3 {
+    font-size: fontSize(h3, tablet);
+    font-size: betweenTablet(tabletMinFontSize(h3), tabletMaxFontSize(h3));
+    line-height: 1.164em;
+  }
+
+  h4 {
+    font-size: fontSize(h4, tablet);
+    font-size: betweenTablet(tabletMinFontSize(h4), tabletMaxFontSize(h4));
+    line-height: 1.167em;
+  }
+
+  p {
+    font-size: fontSize(p, tablet);
+    font-size: betweenTablet(tabletMinFontSize(p), tabletMaxFontSize(p));
+    line-height: 1.8em;
+  }
+}
+
+@include media(desktopMin) {
+  h1 {
+    font-size: fontSize(h1, desktop);
+    font-size: betweenDesktop(desktopMinFontSize(h1), desktopMaxFontSize(h1));
+    line-height: 1.168em;
+  }
+
+  h2 {
+    font-size: fontSize(h2, desktop);
+    font-size: betweenDesktop(desktopMinFontSize(h2), desktopMaxFontSize(h2));
+    line-height: 1.171em;
+  }
+  h3 {
+    font-size: fontSize(h3, desktop);
+    font-size: betweenDesktop(desktopMinFontSize(h3), desktopMaxFontSize(h3));
+    line-height: 1.164em;
+  }
+
+  h4 {
+    font-size: fontSize(h4, desktop);
+    font-size: betweenDesktop(desktopMinFontSize(h4), desktopMaxFontSize(h4));
+    line-height: 1.167em;
+  }
+
+  p {
+    font-size: fontSize(p, desktop);
+    font-size: betweenDesktop(desktopMinFontSize(p), desktopMaxFontSize(p));
+    line-height: 1.8em;
+  }
+}

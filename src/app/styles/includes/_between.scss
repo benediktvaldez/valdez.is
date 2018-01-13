@@ -11,3 +11,15 @@
 
   @return calc(#{$base} + #{100vw * $slope});
 }
+
+@function betweenMobile($from, $to) {
+  @return between($from, $to, mobileMin, mobileMax);
+}
+
+@function betweenTablet($from, $to) {
+  @return between($from, $to, tabletMin, tabletMax);
+}
+
+@function betweenDesktop($from, $to) {
+  @return between($from, $to, desktopMin, desktopMax);
+}

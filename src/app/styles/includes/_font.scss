@@ -3,3 +3,41 @@
     @return unquote(map-get($fonts, $font));
   }
 }
+
+@function fontSize($tag: p, $bp: mobile) {
+  $sizes: map-get($fonts, sizes);
+  $bpSizes: map-get($sizes, $bp);
+  @if map-has-key($bpSizes, $tag) {
+    @return map-get($bpSizes, $tag);
+  }
+  @return 16px;
+}
+@function mobileMinFontSize($tag) {
+  $input: fontSize($tag, mobile);
+  @return $input - $input * .05;
+}
+
+@function mobileMaxFontSize($tag) {
+  $input: fontSize($tag, mobile);
+  @return $input + $input * .2;
+}
+
+@function tabletMinFontSize($tag) {
+  $input: fontSize($tag, tablet);
+  @return $input - $input * .2;
+}
+
+@function tabletMaxFontSize($tag) {
+  $input: fontSize($tag, tablet);
+  @return $input + $input * .2;
+}
+
+@function desktopMinFontSize($tag) {
+  $input: fontSize($tag, desktop);
+  @return $input - $input * .2;
+}
+
+@function desktopMaxFontSize($tag) {
+  $input: fontSize($tag, desktop);
+  @return $input + $input * .2;
+}

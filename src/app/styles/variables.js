@@ -33,7 +33,30 @@ module.exports = {
   },
   fonts: {
     sans: '"Overpass, \'Helvetica Neue\', Arial, sans-serif"',
-    serif: '"Merriweather, serif"'
+    serif: '"Merriweather, serif"',
+    sizes: {
+      mobile: {
+        h1: '60px',
+        h2: '48px',
+        h3: '32px',
+        h4: '32px',
+        p: '16px'
+      },
+      tablet: {
+        h1: '120px',
+        h2: '95px',
+        h3: '76px',
+        h4: '61px',
+        p: '18px'
+      },
+      desktop: {
+        h1: '220px',
+        h2: '140px',
+        h3: '95px',
+        h4: '76px',
+        p: '20px'
+      }
+    }
   },
   breakpoints: {
     mobileMin: '320px',
