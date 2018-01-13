@@ -3,10 +3,10 @@ import React from 'react'
 import * as sections from './sections'
 import './Section.scss'
 
-const Section = ({ type, children }) => {
+const Section = ({ type, children, ...props }) => {
   let sectionEl = null
 
-  if (sections.hasOwnProperty(type)) {
+  if (sections && sections[type]) {
     sectionEl = sections[type]
   }
 
@@ -14,7 +14,7 @@ const Section = ({ type, children }) => {
     <section>
       {React.createElement(
         sectionEl || 'p',
-        {},
+        props,
         sectionEl ? children : `No section with type ${type}`
       )}
     </section>
