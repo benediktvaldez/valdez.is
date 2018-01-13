@@ -3,7 +3,7 @@ import React from 'react'
 export default ({ children }) => {
   return (
     <div>
-      <p>Career</p>
+      <h3>Career</h3>
       {children}
     </div>
   )

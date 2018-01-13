@@ -3,7 +3,7 @@ import React from 'react'
 export default ({ children }) => {
   return (
     <div>
-      <p>Community</p>
+      <h3>Community</h3>
       {children}
     </div>
   )
