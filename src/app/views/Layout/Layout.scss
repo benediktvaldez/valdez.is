@@ -1,19 +1,11 @@
 main {
-  background: linear-gradient(
-    0deg,
-    color(dark),
-    color(dark),
-    color(dark),
-    color(red),
-    color(red),
-    color(dark),
-    color(dark),
-    color(blue),
-    color(blue),
-    color(dark),
-    color(dark),
-    color(red)
-  );
-  background-position: 0% 0%;
-  background-size: 1000% 1000%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  background-color: color(dark);
+
+  transition: opacity 250ms ease 250ms;
+
+  opacity: 1 !important;
 }

@@ -15,7 +15,7 @@ class Layout extends Component {
 
   defaultProps: {
     disabled: false,
-    throttle: 150
+    throttle: 300
   }
 
   constructor(props) {
@@ -75,16 +75,16 @@ class Layout extends Component {
     const scrollPosition = pageYOffset + offset
 
     const value =
-      (scrollPosition === 0 ? 0 : scrollPosition / innerHeight) /
+      (scrollPosition <= 0 ? 0 : scrollPosition / innerHeight) /
       (docHeight / innerHeight)
 
     const percentage = value > 1 ? 100 : value * 100
 
     this.setState({
       docHeight,
+      percentage,
       pageYOffset,
-      scrollPosition,
-      backgroundPosition: `${percentage}% ${percentage}%`
+      scrollPosition
     })
   }
 
@@ -96,7 +96,7 @@ class Layout extends Component {
       backgroundPosition
     } = this.state
     return (
-      <main className="container" style={{ backgroundPosition }}>
+      <main className="container" style={{opacity: 0}}>
         <Helmet titleTemplate="%s | valdez.is">
           <title>valdez.is</title>
         </Helmet>
