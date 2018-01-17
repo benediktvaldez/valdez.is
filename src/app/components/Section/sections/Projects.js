@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({ children }) => {
   return (
-    <div>
+    <div className="col">
       <h3>Projects</h3>
       {children}
     </div>

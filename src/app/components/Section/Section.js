@@ -14,11 +14,11 @@ class Section extends Component {
 
   render() {
     this.rect = this.section ? this.section.getBoundingClientRect() : {}
-    const { type, children, ...props } = this.props
+    const { section, children, ...props } = this.props
     let sectionEl = null
 
-    if (sections && sections[type]) {
-      sectionEl = sections[type]
+    if (sections && sections[section]) {
+      sectionEl = sections[section]
     }
 
     return (
@@ -30,8 +30,8 @@ class Section extends Component {
       >
         {React.createElement(
           sectionEl || 'p',
-          sectionEl ? { type, rect: this.rect, ...props } : {},
-          sectionEl ? children : `No section with type ${type}`
+          sectionEl ? { section, rect: this.rect, ...props } : {},
+          sectionEl ? children : `No section called ${section}`
         )}
       </section>
     )

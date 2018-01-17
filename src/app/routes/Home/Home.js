@@ -15,16 +15,16 @@ const Home = ({ screenProps, jobResult: data }) => {
     </Helmet>,
     <div key="Home">
       <Header screenProps={screenProps} />
-      <Section screenProps={screenProps} type="Introduction" />
-      <Section screenProps={screenProps} type="Community" />
-      <Section screenProps={screenProps} type="Career" />
-      <Section screenProps={screenProps} type="Experience" />
-      <Section screenProps={screenProps} type="Projects" />
+      <Section screenProps={screenProps} section="Introduction" />
+      <Section screenProps={screenProps} section="Community" />
+      <Section screenProps={screenProps} section="Career" />
+      <Section screenProps={screenProps} section="Experience" />
+      <Section screenProps={screenProps} section="Projects" />
       <Footer screenProps={screenProps} />
-    </div>
+    </div>,
   ]
 }
 
 export default withJob({
-  work: () => api.getEntries({ content_type: 'viewHome' })
+  work: () => api.getEntries({ content_type: 'viewHome' }),
 })(Home)
