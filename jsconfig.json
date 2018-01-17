@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "baseUrl": "./src",
+    // NOTE: paths werent working properly due to vscode bug, baseUrl does the trick for now
+    // "paths": {
+    //   "app/*": [
+    //     "./app"
+    //   ],
+    //   "server/*": [
+    //     "./server/*"
+    //   ]
+    // }
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
