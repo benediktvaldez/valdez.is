@@ -21,7 +21,7 @@ module.exports = {
             {
               loader: require.resolve('@epegzz/sass-vars-loader'),
               options: {
-                files: [require.resolve('./src/app/styles/variables')]
+                files: [require.resolve('./src/app/styles')]
               }
             }
           ]

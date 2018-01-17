@@ -33,10 +33,10 @@ module.exports = {
   },
   fonts: {
     sans: '"Overpass, \'Helvetica Neue\', Arial, sans-serif"',
-    serif: '"Merriweather, serif"',
+    serif: '"\'Averia Serif Libre\', Merriweather, serif"',
     sizes: {
       mobile: {
-        h1: '60px',
+        h1: '100px',
         h2: '48px',
         h3: '32px',
         h4: '32px',
@@ -65,5 +65,12 @@ module.exports = {
     tabletMax: '999px',
     desktopMin: '1000px',
     desktopMax: '2000px'
-  }
+  },
+  grid: {
+    columnCount: 12,
+    column: `${100 / 12}vw`
+  },
+  gutter: '16px',
+  easeInQuart: 'cubic-bezier(0.895, 0.03, 0.685, 0.22)',
+  easeOutQuart: 'cubic-bezier(0.165, 0.84, 0.44, 1)'
 }

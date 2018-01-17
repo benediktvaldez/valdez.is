@@ -1,5 +1,5 @@
-
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -44,7 +44,15 @@ h4 {
 p {
   font-size: fontSize(p, mobile);
   font-size: betweenMobile(mobileMinFontSize(p), mobileMaxFontSize(p));
-  line-height: 1.8em;
+  line-height: 1.2em;
+
+  &.large {
+    font-size: fontSize(p, mobile) * 2;
+    font-size: betweenMobile(
+      mobileMinFontSize(p) * 2,
+      mobileMaxFontSize(p) * 2
+    );
+  }
 }
 
 @include media(tabletMin) {
@@ -74,7 +82,6 @@ p {
   p {
     font-size: fontSize(p, tablet);
     font-size: betweenTablet(tabletMinFontSize(p), tabletMaxFontSize(p));
-    line-height: 1.8em;
   }
 }
 
@@ -105,6 +112,5 @@ p {
   p {
     font-size: fontSize(p, desktop);
     font-size: betweenDesktop(desktopMinFontSize(p), desktopMaxFontSize(p));
-    line-height: 1.8em;
   }
 }

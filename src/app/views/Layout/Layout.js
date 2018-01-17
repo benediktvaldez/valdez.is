@@ -89,12 +89,6 @@ class Layout extends Component {
   }
 
   render() {
-    const {
-      docHeight,
-      pageYOffset,
-      scrollPosition,
-      backgroundPosition
-    } = this.state
     return (
       <main className="container" style={{opacity: 0}}>
         <Helmet titleTemplate="%s | valdez.is">
@@ -102,13 +96,7 @@ class Layout extends Component {
         </Helmet>
 
         <TestGrid vertical />
-        <Home
-          screenProps={{
-            docHeight,
-            pageYOffset,
-            scrollPosition
-          }}
-        />
+        <Home screenProps={this.state} />
       </main>
     )
   }
