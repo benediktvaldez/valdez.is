@@ -1617,6 +1617,12 @@ buffer@^4.3.0:
     ieee754 "^1.1.4"
     isarray "^1.0.0"
 
+buffered-reader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/buffered-reader/-/buffered-reader-1.0.1.tgz#d63c9cd54a9645552e3fed9d9ea2d7fce22fd5a7"
+  dependencies:
+    errno-codes "*"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -2802,6 +2808,10 @@ enhanced-resolve@^3.4.0:
 entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
+
+errno-codes@*:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/errno-codes/-/errno-codes-1.0.2.tgz#3e2cf56b888dd7200c4367ffc0a7d007be30c7b4"
 
 errno@^0.1.3:
   version "0.1.6"
