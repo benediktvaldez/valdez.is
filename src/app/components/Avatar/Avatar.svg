@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="910px" height="1060px" viewBox="0 0 910 1060" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Avatar</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M455,1060 C706.289561,1060 910,856.289561 910,605 C910,353.710439 661.289561,5.68434189e-14 410,5.68434189e-14 C158.710439,5.68434189e-14 0,353.710439 0,605 C0,856.289561 203.710439,1060 455,1060 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Avatar">
+            <circle id="circle" fill="#00A1E4" cx="455" cy="605" r="455"></circle>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="mask" opacity="0.5"></g>
+            <g id="FullBodyImage-gray" mask="url(#mask-2)">
+                <g transform="translate(-213.000000, -357.000000)" id="Benni_A9T3062-gray">
+                    <image x="0" y="0" width="1221" height="2002" xlink:href="/path/to/image"></image>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
