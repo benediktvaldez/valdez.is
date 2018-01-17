@@ -10,10 +10,11 @@ import imageRed from './FullBodyImage-red.png'
 
 import './Avatar.scss'
 
+// prettier-ignore
 const images = {
-  gray: imageGray,
-  blue: imageBlue,
-  red: imageRed
+  gray: 'https://images.contentful.com/4oeboeik7h0d/4u6LDPiEq4CoiyiOosykic/c0bac040a844cb8c5fd609eefef85c16/FullBodyImage-gray.png',
+  blue: 'https://images.contentful.com/4oeboeik7h0d/30sOaivLtKQQ6Kus0C4Ew2/3c9468a431a6382d971103ec1da701a2/FullBodyImage-blue.png',
+  red: 'https://images.contentful.com/4oeboeik7h0d/2T8vFlu7HOGqee6Ceq4kAa/5c25eb888b4a4988f53aee9f9862c22d/FullBodyImage-red.png',
 }
 
 const Avatar = ({ circle, image, imageTransform, className, ...props }) => (
@@ -48,7 +49,7 @@ const Avatar = ({ circle, image, imageTransform, className, ...props }) => (
           width="1221"
           height="2002"
           style={{
-            transform: imageTransform
+            transform: imageTransform,
           }}
           xlinkHref={images[image]}
         />
@@ -66,14 +67,14 @@ Avatar.propTypes = {
   circle: PropTypes.oneOf(colorsArray).isRequired,
   image: PropTypes.oneOf(['blue', 'red', 'gray']).isRequired,
   imageTransform: PropTypes.string.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 }
 
 Avatar.defaultProps = {
   circle: 'blue',
   image: 'gray',
   imageTransform: 'translate(-213 -357)',
-  className: ''
+  className: '',
 }
 
 export default Avatar
