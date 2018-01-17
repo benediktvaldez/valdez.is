@@ -16,6 +16,7 @@
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-jobs": "^1.0.0",
+    "react-scroll": "^1.7.6",
     "sass-loader": "^6.0.6",
     "tux": "^0.4.0"
   },

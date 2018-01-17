@@ -1,0 +1,93 @@
+$circle-dur: 2s;
+$circle-delay: 0.25s;
+
+$arrow1-dur: 0.65s;
+$arrow2-dur: 0.65s;
+
+$arrow2-delay: 0s;
+$arrow2-out-delay: $arrow2-delay + 1.15s;
+$arrow1-delay: $arrow2-delay + 0.1s;
+$arrow1-out-delay: $arrow2-out-delay + 0.1s;
+
+.ScrollIndicator {
+  cursor: pointer;
+
+  position: absolute;
+
+  left: 50%;
+  bottom: $gutter*8;
+
+  width: 20vmin;
+  max-width: 79px;
+  height: auto;
+
+  transition: transform $circle-dur $easeInQuart $circle-delay;
+  transform: translate3d(-50%, 0, 0);
+
+  .arrow {
+    position: relative;
+    opacity: 0;
+    transform-origin: center center;
+    transform: translate3d(0, -20px, 0) scale(0.8);
+  }
+
+  .arrow-1 {
+    transition: all $arrow1-dur;
+    transition-delay: $arrow1-delay;
+  }
+
+  .arrow-2 {
+    transition: all $arrow2-dur;
+    transition-delay: $arrow2-delay;
+  }
+
+  .circle {
+    stroke-dasharray: 240 2000;
+    stroke-dashoffset: -241;
+
+    will-change: stroke-dasharray, stroke-dashoffset;
+  }
+
+  &.in {
+    .arrow {
+      opacity: 1;
+      transform-origin: center center;
+      transform: translate3d(0, -0%, 0) scale(1);
+    }
+
+    .circle {
+      transition: stroke-dashoffset $circle-dur $easeOutQuart,
+        stroke-dasharray $circle-dur/2 $easeOutQuart;
+      transition-delay: $circle-delay;
+      stroke-dasharray: 47 10;
+      stroke-dashoffset: 24;
+    }
+  }
+
+  &.out {
+    transform: translate3d(-50%, 150%, 0);
+
+    .arrow {
+      opacity: 0;
+      transform-origin: center center;
+      transform: translate3d(0, 20px, 0) scale(0.8);
+
+      transition-delay: $circle-delay/2;
+
+      &-1 {
+        transition-delay: $arrow1-out-delay;
+      }
+      &-2 {
+        transition-delay: $arrow2-out-delay;
+      }
+    }
+
+    .circle {
+      transition: stroke-dashoffset $circle-dur $easeOutQuart,
+        stroke-dasharray $circle-dur $easeInQuart;
+      stroke-dasharray: 240 2000;
+      stroke-dashoffset: 241;
+      transition-delay: 0s;
+    }
+  }
+}
