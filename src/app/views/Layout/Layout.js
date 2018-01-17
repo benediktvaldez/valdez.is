@@ -10,12 +10,12 @@ import './Layout.scss'
 class Layout extends Component {
   propTypes: {
     disabled: PropTypes.bool,
-    throttle: PropTypes.number.isRequired
+    throttle: PropTypes.number.isRequired,
   }
 
   defaultProps: {
     disabled: false,
-    throttle: 300
+    throttle: 300,
   }
 
   constructor(props) {
@@ -25,7 +25,7 @@ class Layout extends Component {
       docHeight: 0,
       pageYOffset: 0,
       scrollPosition: 0,
-      backgroundPosition: '0% 0%'
+      backgroundPosition: '0% 0%',
     }
 
     this.addListener = this.addListener.bind(this)
@@ -84,13 +84,13 @@ class Layout extends Component {
       docHeight,
       percentage,
       pageYOffset,
-      scrollPosition
+      scrollPosition,
     })
   }
 
   render() {
     return (
-      <main className="container" style={{opacity: 0}}>
+      <main className="container" style={{ opacity: 0 }}>
         <Helmet titleTemplate="%s | valdez.is">
           <title>valdez.is</title>
         </Helmet>

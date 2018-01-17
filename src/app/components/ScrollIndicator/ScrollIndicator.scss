@@ -65,6 +65,7 @@ $arrow1-out-delay: $arrow2-out-delay + 0.1s;
   }
 
   &.out {
+    cursor: default;
     transform: translate3d(-50%, 150%, 0);
 
     .arrow {

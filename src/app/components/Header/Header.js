@@ -15,7 +15,7 @@ class Header extends Component {
 
     this.state = {
       show: false,
-      hide: false
+      hide: false,
     }
 
     this.timeout = 0
@@ -26,7 +26,7 @@ class Header extends Component {
   componentDidMount() {
     this.timeout = setTimeout(() => {
       this.setState({
-        show: true
+        show: true,
       })
     }, 1000)
   }
@@ -43,21 +43,23 @@ class Header extends Component {
       nextProps.screenProps.pageYOffset > 150
     ) {
       this.setState({
-        hide: true
+        hide: true,
       })
     } else {
       this.setState({
-        show: true
+        show: true,
       })
     }
   }
 
   scrollToNext() {
-    animateScroll.scrollTo(window.innerHeight * 0.75, {
-      duration: 2000,
-      delay: 200,
-      smooth: 'easeOutQuint'
-    })
+    if (this.state.hide !== true) {
+      animateScroll.scrollTo(window.innerHeight * 0.75, {
+        duration: 2000,
+        delay: 200,
+        smooth: 'easeOutQuint',
+      })
+    }
   }
 
   render() {
@@ -66,14 +68,14 @@ class Header extends Component {
     return (
       <header className="row align-items-center">
         <div className="col">
-          <h1>hi.</h1>
+          <h1>hi</h1>
         </div>
 
         <ScrollIndicator
           onClick={this.scrollToNext}
           className={cn(show ? 'in' : '', hide ? 'out' : '')}
         />
-        <Gradient height={120} colors={['dark', 'red']} />
+        <Gradient height={120} colors={['dark', 'red', 'red']} />
       </header>
     )
   }
