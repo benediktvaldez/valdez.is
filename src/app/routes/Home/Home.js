@@ -15,7 +15,11 @@ const Home = ({ screenProps, jobResult: data }) => {
     </Helmet>,
     <div key="Home">
       <Header screenProps={screenProps} />
-      <Section screenProps={screenProps} section="Introduction" />
+      <Section
+        screenProps={screenProps}
+        section="Introduction"
+        content={content.fields.introduction}
+      />
       <Section screenProps={screenProps} section="Community" />
       <Section screenProps={screenProps} section="Career" />
       <Section screenProps={screenProps} section="Experience" />

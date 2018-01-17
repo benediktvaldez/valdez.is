@@ -6,7 +6,7 @@ import './Introduction.scss'
 
 class Introduction extends Component {
   render() {
-    const { rect, ...props } = this.props
+    const { rect, content, ...props } = this.props
     const value = -1 + rect.top / rect.height || 0
     const per = value < -1 ? -1 : value
 
@@ -19,10 +19,7 @@ class Introduction extends Component {
           active ? 'active' : 'inactive'
         }`}
       >
-        <p className="large">
-          I'm Benedikt Daníel Valdez Stefánsson; father, husband, creator,
-          developer, musician, photographer.
-        </p>
+        <p className="large">{content}</p>
       </div>,
       <Avatar
         key="avatar"
@@ -30,7 +27,7 @@ class Introduction extends Component {
         image="blue"
         className={`Avatar--introduction ${active ? 'active' : 'inactive'}`}
         imageTransform={`translate3d(-${213}px, ${357 * per}px, 0)`}
-      />
+      />,
     ]
   }
 }
