@@ -3,6 +3,7 @@ import cn from 'classnames'
 
 import { colors } from 'app/styles'
 import Gradient from 'app/components/Gradient'
+import Contact from 'app/components/Contact'
 import ScrollIndicator from 'app/components/ScrollIndicator'
 
 import { animateScroll } from 'react-scroll'
@@ -75,6 +76,7 @@ class Header extends Component {
           onClick={this.scrollToNext}
           className={cn(show ? 'in' : '', hide ? 'out' : '')}
         />
+        <Contact className={show ? 'active' : ''} />
         <Gradient height={120} colors={['dark', 'red', 'red']} />
       </header>
     )

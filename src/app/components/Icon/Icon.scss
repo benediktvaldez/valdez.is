@@ -1,0 +1,104 @@
+.Icon {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    background-color: color(dark);
+    border-radius: 100%;
+
+    transform: scale(0) translateZ(0);
+    transition: transform 250ms;
+
+    height: 0;
+    padding-top: 100%;
+  }
+
+  &--svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    margin: auto;
+    width: 50px;
+    height: auto;
+
+    transform: scale(1.5) translateZ(0);
+    transition: transform 250ms;
+
+    path {
+      transition: fill 250ms;
+      fill: color(dark);
+    }
+
+    $multiplier: 0.35;
+
+    &__dribbble {
+      width: 58px * $multiplier;
+    }
+    &__email {
+      width: 62px * $multiplier;
+    }
+    &__facebook {
+      width: 58px * $multiplier;
+    }
+    &__github {
+      width: 63px * $multiplier;
+    }
+    &__instagram {
+      width: 58px * $multiplier;
+    }
+    &__linkedin {
+      width: 58px * $multiplier;
+    }
+    &__medium {
+      width: 58px * $multiplier;
+    }
+    &__phone {
+      width: 56px * $multiplier;
+    }
+    &__snapchat {
+      width: 60px * $multiplier;
+    }
+    &__stackoverflow {
+      width: 53px * $multiplier;
+    }
+    &__twitter {
+      width: 62px * $multiplier;
+    }
+  }
+}
+
+a.Icon {
+  &:hover {
+    &:after {
+      transition-duration: 300ms;
+      transform: scale(1) translateZ(0);
+    }
+
+    .Icon--svg {
+      transition-duration: 500ms;
+      transform: scale(1.01) translateZ(0);
+
+      path {
+        transition-duration: 500ms;
+        fill: color(light);
+      }
+    }
+  }
+}

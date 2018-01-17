@@ -1,0 +1,40 @@
+.Contact {
+  position: absolute;
+  left: $gutter*1;
+  right: $gutter*1;
+
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .Icon {
+    margin: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50px;
+  }
+
+  header & {
+    top: $gutter;
+
+    .Icon {
+      opacity: 0;
+      transition: opacity 250ms;
+    }
+
+    &.active {
+      .Icon {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  footer & {
+    bottom: $gutter;
+    flex-wrap: wrap-reverse;
+  }
+}
