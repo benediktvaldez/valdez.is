@@ -1,7 +1,9 @@
 header,
 footer,
 section {
-  min-height: 95vh;
+  position: relative;
+
+  height: 100vh;
   display: flex;
 
   justify-content: center;
