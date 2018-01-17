@@ -4,10 +4,6 @@ import cn from 'classnames'
 
 import { colors } from 'app/styles'
 
-import imageGray from './FullBodyImage-gray.png'
-import imageBlue from './FullBodyImage-blue.png'
-import imageRed from './FullBodyImage-red.png'
-
 import './Avatar.scss'
 
 // prettier-ignore
