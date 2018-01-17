@@ -21,6 +21,7 @@ const Home = ({ screenProps, jobResult: data }) => {
         content={content.fields.introduction}
       />
       <Section screenProps={screenProps} section="Community" />
+      <Section screenProps={screenProps} section="OpenSource" />
       <Section screenProps={screenProps} section="Career" />
       <Section screenProps={screenProps} section="Experience" />
       <Section screenProps={screenProps} section="Projects" />

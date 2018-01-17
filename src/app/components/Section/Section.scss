@@ -8,21 +8,26 @@ section {
 
   // border-bottom: 2px dashed color(red);
 
+  h3 {
+    text-align: center;
+  }
+
   .content {
     z-index: 20;
 
-      &.inactive, &.active {
-        transition: opacity .5s;
-      }
+    &.inactive,
+    &.active {
+      transition: opacity 0.5s;
+    }
 
-      &.inactive {
-        opacity: 0;
-        transition-duration: .1s;
-      }
+    &.inactive {
+      opacity: 0;
+      transition-duration: 0.1s;
+    }
 
-      &.active {
-        opacity: 1;
-        transition-delay: .5s;
-      }
+    &.active {
+      opacity: 1;
+      transition-delay: 0.5s;
+    }
   }
 }
