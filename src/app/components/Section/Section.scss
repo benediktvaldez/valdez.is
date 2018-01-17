@@ -6,6 +6,23 @@ section {
   height: 100vh;
   display: flex;
 
-  justify-content: center;
-  align-items: center;
+  // border-bottom: 2px dashed color(red);
+
+  .content {
+    z-index: 20;
+
+      &.inactive, &.active {
+        transition: opacity .5s;
+      }
+
+      &.inactive {
+        opacity: 0;
+        transition-duration: .1s;
+      }
+
+      &.active {
+        opacity: 1;
+        transition-delay: .5s;
+      }
+  }
 }
