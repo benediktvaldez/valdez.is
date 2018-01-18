@@ -32,7 +32,8 @@
     "precommit": "lint-staged",
     "start": "tux-scripts start",
     "build": "tux-scripts build",
-    "serve": "tux-scripts serve"
+    "serve": "tux-scripts serve",
+    "test": "echo No tests"
   },
   "lint-staged": {
     "*.js": ["yarn run prettier --write", "git add"]
