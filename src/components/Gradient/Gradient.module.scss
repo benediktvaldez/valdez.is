@@ -1,0 +1,17 @@
+$gutter: 16px;
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: -#{$gutter};
+  right: -#{$gutter};
+  z-index: -1;
+
+  display: block;
+  height: 200vh;
+
+  background-color: color(dark);
+
+  user-select: none;
+  pointer-events: none;
+}

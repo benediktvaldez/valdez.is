@@ -1,0 +1,36 @@
+@import './includes/index';
+
+$grid-columns: 12;
+$grid-gutter-width: 16px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 1px,
+  md: breakpoint(tabletMin),
+  lg: breakpoint(desktopMin),
+  xl: breakpoint(desktopMax) + 1
+);
+$container-max-widths: (
+  sm: 100vw
+);
+
+// These mixins are overwriting internal bootstrap mixins
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 (($size / $columns) * 100vw);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+
+  max-width: (($size / $columns) * 100vw);
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  // This & is needed to prevent csscomb from putting $num at the bottom of this block
+  & {
+    margin-left: if($num == 0, 0, ($num * 100vw));
+  }
+}
+
+// create grid columns and wrappers with vars above
+@import 'node_modules/bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/utilities/flex';

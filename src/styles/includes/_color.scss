@@ -1,0 +1,58 @@
+$colors: (
+  red: #BF1313,
+  blue: #00A1E4,
+  dark: #272727,
+  gray: #696773,
+  light: #EFF1F3,
+  variations: (
+    light: (
+      function: lighten,
+      parameters: 15%,
+    ),
+    dark: (
+      function: darken,
+      parameters: 10%,
+    ),
+    fade: (
+      function: rgba,
+      parameters: .7,
+    ),
+    tint: (
+      function: rgba,
+      parameters: .1,
+    ),
+    gray: (
+      function: grayscale,
+    ),
+    shade: (
+      function: mix,
+      parameters: white 80%,
+    )
+  )
+);
+
+@function color($color, $variation: false) {
+  @if map-has-key($colors, $color) {
+    $color: map-get($colors, $color);
+  } @else {
+    @if type-of($color) != color {
+      @error "Invalid color name: `#{$color}`.";
+    }
+  }
+
+  @if $variation {
+    $variations: map-get($colors, variations);
+    @if not map-has-key($variations, $variation) {
+      @error "Invalid $variation: `#{$variation}`.";
+    } @else {
+      $this-variation: map-get($variations, $variation);
+      $args: join(map-get($this-variation, function), $color);
+      @if map-get($this-variation, parameters) {
+        $args: join($args, map-get($this-variation, parameters));
+      }
+      @return call($args...);
+    }
+  }
+
+  @return $color;
+}

@@ -1,0 +1,13 @@
+@value dark from '../styles/values.module.css';
+
+.main {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  background-color: dark;
+
+  transition: opacity 250ms ease 250ms;
+
+  opacity: 1 !important;
+}

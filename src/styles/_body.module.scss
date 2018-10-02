@@ -1,0 +1,25 @@
+@value mono, serif, light, dark, red from 'styles/values.module.css';
+
+html, body {
+  font-family: serif;
+
+  color: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: red;
+  transition: background-color 250ms;
+
+  ::selection {
+    color: light;
+    background-color: red;
+  }
+}
+
+body {
+  background-color: transparent;
+}
+
+code {
+  font-family: mono;
+}

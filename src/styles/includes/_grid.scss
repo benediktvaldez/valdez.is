@@ -1,0 +1,5 @@
+$column: (100vw/12);
+
+@function colWidth($count: 1) {
+  @return calc(#{$column * $count} - 16px)
+}

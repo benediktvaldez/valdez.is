@@ -1,0 +1,31 @@
+// @import "../../styles/includes/index";
+
+.Image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  transition: opacity 1500ms;
+
+  user-select: none;
+  pointer-events: none;
+
+  &.loading {
+    opacity: 0;
+  }
+
+  &.loaded {
+    opacity: 1;
+  }
+
+  &.failed {
+    opacity: 1;
+  }
+}

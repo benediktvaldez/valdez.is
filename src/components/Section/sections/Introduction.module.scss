@@ -1,0 +1,42 @@
+@value dark, light, red from 'styles/values.module.css';
+
+.content.introduction {
+  align-self: center;
+
+  p.large {
+    position: relative;
+    top: 15vmin;
+    z-index: 11;
+
+    font-weight: 700;
+  }
+
+  p.intro {
+    > span {
+      position: relative;
+      z-index: 11;
+
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+
+      display: block;
+      width: 0;
+      height: 0;
+
+      border-top: 35vw solid red;
+      border-left: 50vw solid transparent;
+
+      transform: translate3d(-5vw, -4vw, 0) rotate(10deg);
+
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+}

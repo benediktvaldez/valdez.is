@@ -1,0 +1,26 @@
+@value red, dark from 'styles/values.module.css';
+@import "../../styles/includes/index";
+
+.header {
+  position: relative;
+
+  height: 100vh;
+  display: flex;
+
+  h1 {
+    position: relative;
+    top: -10vmin;
+
+    text-align: center;
+    color: red;
+
+    @include media(tabletMin) {
+      top: auto;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 11;
+}

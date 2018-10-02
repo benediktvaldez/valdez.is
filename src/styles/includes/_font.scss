@@ -1,0 +1,60 @@
+$font-sizes: (
+  mobile: (
+    h1: 100px,
+    h2: 48px,
+    h3: 32px,
+    h4: 32px,
+    p: 16px,
+  ),
+  tablet: (
+    h1: 120px,
+    h2: 95px,
+    h3: 76px,
+    h4: 61px,
+    p: 18px,
+  ),
+  desktop: (
+    h1: 220px,
+    h2: 140px,
+    h3: 95px,
+    h4: 76px,
+    p: 20px,
+  ),
+);
+
+@function fontSize($tag: p, $bp: mobile) {
+  $bpSizes: map-get($font-sizes, $bp);
+  @if map-has-key($bpSizes, $tag) {
+    @return map-get($bpSizes, $tag);
+  }
+  @return 16px;
+}
+@function mobileMinFontSize($tag) {
+  $input: fontSize($tag, mobile);
+  @return $input - $input * .05;
+}
+
+@function mobileMaxFontSize($tag) {
+  $input: fontSize($tag, mobile);
+  @return $input + $input * .2;
+}
+
+@function tabletMinFontSize($tag) {
+  $input: fontSize($tag, tablet);
+  @return $input - $input * .2;
+}
+
+@function tabletMaxFontSize($tag) {
+  $input: fontSize($tag, tablet);
+  @return $input + $input * .2;
+}
+
+@function desktopMinFontSize($tag) {
+  $input: fontSize($tag, desktop);
+  @return $input - $input * .2;
+}
+
+@function desktopMaxFontSize($tag) {
+  $input: fontSize($tag, desktop);
+  @return $input + $input * .2;
+}

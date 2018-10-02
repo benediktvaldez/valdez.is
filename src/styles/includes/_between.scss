@@ -1,0 +1,23 @@
+// Computes a CSS calc function that betweens a value from
+// A to B over viewport-width A to viewport-width B.
+// Requires a media query to cap the value at B.
+// More info: https://css-tricks.com/between-the-lines/
+
+@function between($from, $to, $fromWidth, $toWidth) {
+  $slope: ($to - $from) / (breakpoint($toWidth) - breakpoint($fromWidth));
+  $base: $from - $slope * breakpoint($fromWidth);
+
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+@function betweenMobile($from, $to) {
+  @return between($from, $to, mobileMin, mobileMax);
+}
+
+@function betweenTablet($from, $to) {
+  @return between($from, $to, tabletMin, tabletMax);
+}
+
+@function betweenDesktop($from, $to) {
+  @return between($from, $to, desktopMin, desktopMax);
+}
